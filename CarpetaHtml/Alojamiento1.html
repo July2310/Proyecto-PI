@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/DatosAlojamiento.css">
+</head>
+<body>
+    <h1>Ejemplo de alojamiento</h1>
+
+    <div class="row">
+        <img src="../images/prueba0.jpg" alt="">   
+        <img src="../images/prueba1.jpg" alt="">
+        <img src="../images/prueba2.jpg" alt="">
+        <img src="../images/prueba3.jpg" alt="">
+        <img src="../images/prueba4.jpg" alt="">
+        <img src="../images/prueba5.jpg" alt="">
+        <img src="../images/prueba6.jpg" alt="">
+        <img src="../images/prueba7.jpg" alt="">
+        
+    </div>
+
+
+    <form class="form" action="Alojamiento" method="get">
+        <p>Nombre: <input type="text" name="nombre" size="40"></p>
+        <p>Descripcion: <input type="text" name="descripcion" size="40"></p>
+        <p>Telefono: <input type="tel" name="telefono" size="40"></p>
+        <p>Correo de contacto: <input type="email" name="correo" size="40"></p>
+        <p>Precio: <input type="number" name="precio" size="40"></p>
+
+            <label for="browser">Categoria: </label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+              <option value="categoria1">
+              <option value="categoria2">
+              <option value="categoria3">
+              <option value="categoria4">
+              <option value="categoria5">
+            </datalist>
+            
+            
+        <p>Media de valoraciones: </p>
+            <input type="radio" id="val1" name="val" value="30">
+            <label for="val1">1</label>
+            <input type="radio" id="val2" name="val" value="60">
+            <label for="val2">2</label>
+            <input type="radio" id="val3" name="val" value="100">
+            <label for="val3">3</label>
+            <input type="radio" id="val4" name="val" value="100">
+            <label for="val4">4</label>
+            <input type="radio" id="val5" name="val" value="100">
+            <label for="val5">5</label>
+        <p>Servicios:</p>
+        <input type="checkbox" id="" name="" value="">
+        <label for=""> Piscina</label><br>
+        <input type="checkbox" id="" name="" value="">
+        <label for=""> Garaje</label><br>
+        <input type="checkbox" id="" name="" value="">
+        <label for=""> Servicio de habitaciones</label>
+        
+        <p>Reserva: <input type="date" name="reserva"></p>
+        
+      </form>
+
+
+
+</body>
+</html>

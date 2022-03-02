@@ -1,0 +1,212 @@
+
+:root {
+    --black: #3a3a3a;
+    --white: rgb(255, 255, 255);
+    --green: #86b249;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  img {
+    display: block;
+      max-width: 100%;
+      max-height: auto;
+      object-fit: contain;
+  }
+  
+  ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p{
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  body {
+    margin: 50px 0;
+    color: var(--black);
+    font: 1rem/1.3 sans-serif;
+    background: #a9a5a5a7;
+  }
+  
+  .author-archive {
+    padding: 1.5rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 a {
+    transition: all 0.1s;
+  }
+  
+  h1 a:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  
+  /* FILTERS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .filters {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .filters * {
+    display: inline-block;
+  }
+  
+  .filters label {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 2rem;
+    min-width: 50px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.1s;
+  }
+  
+  .filters label:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  
+  /* FILTERED ELEMENTS (POSTS)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .posts {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .posts .post {
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .posts .post-title {
+    font-size: 1.3rem;
+  }
+  
+  .posts .post-title:hover {
+    text-decoration: underline;
+  }
+  
+  .posts figcaption {
+    padding: 1rem;
+  }
+  
+  .posts .post-categories {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+  }
+  
+  .posts .post-categories * {
+    display: inline-block;
+  }
+  
+  .posts .post-categories li {
+    margin-bottom: 0.2rem;
+  }
+  
+  .posts .post-categories a {
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    line-height: normal;
+    transition: all 0.1s;
+  }
+  .post .post-categories p{
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    line-height: normal;
+    transition: all 0.1s;
+  }
+  
+  .posts .post-categories a:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+  .post .post-categories 
+  
+  
+  /* FILTERING RULES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  [value="All"]:checked ~ .filters [for="All"],
+  [value="CasaDomo"]:checked ~ .filters [for="CasaDomo"],
+  [value="Cabañas"]:checked ~ .filters [for="Cabañas"],
+  [value="PiscinasIncreibles"]:checked ~ .filters [for="PiscinasIncreibles"],
+  [value="Granjas"]:checked ~ .filters [for="Granjas"],
+  [value="Cuevas"]:checked ~ .filters [for="Cuevas"],
+  [value="Singulares"]:checked ~ .filters [for="Singulares"] {
+    background: var(--green);
+    color: var(--white);
+  }
+  
+  [value="All"]:checked ~ .posts [data-category] {
+    display: block;
+  }
+  
+  [value="CasaDomo"]:checked ~ .posts .post:not([data-category~="CasaDomo"]),
+  [value="Cabañas"]:checked ~ .posts .post:not([data-category~="Cabañas"]),
+  [value="PiscinasIncreibles"]:checked ~ .posts .post:not([data-category~="PiscinasIncreibles"]),
+  [value="Granjas"]:checked ~ .posts .post:not([data-category~="Granjas"]),
+  [value="Cuevas"]:checked ~ .posts .post:not([data-category~="Cuevas"]),
+  [value="Singulares"]:checked ~ .posts .post:not([data-category~="Singulares"]) {
+    display: none;
+  }
+  
+  
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  footer {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+    text-align: right;
+  }
+  
+  footer span {
+    color: #e31b23;
+  }
+  
+  
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 900px) {
+    .posts {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    html {
+      font-size: 14px;
+    }
+  
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
